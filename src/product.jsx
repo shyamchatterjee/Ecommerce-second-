@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router";
-import AddProduct from "./addproduct";
+import AddProduct from "./component/addproduct";
 import { Context } from "./appcontext";
 
 let Product = () => {
@@ -23,7 +23,7 @@ let Product = () => {
             <div className="nav">
               <Link to="/">Home</Link>
               <Link to="/product">Product</Link>
-            
+
               <Link to="/cart">
                 <button className="cartbutton">{counter.cart.length}</button>
               </Link>
@@ -31,7 +31,7 @@ let Product = () => {
           </div>
           <Link to="/">Home</Link>
           <Link to="/product">Product</Link>
-          
+
           <div className="link">
             <Link to="/cart">
               <button className="cartbutton">{counter.cart.length}</button>

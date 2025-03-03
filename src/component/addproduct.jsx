@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./App.css";
-import { Context } from "./appcontext";
-import Button from "./buttonadd";
+import { Context } from "../appcontext";
+import Button from "../buttonadd";
 import { Link } from "react-router";
 
 let AddProduct = () => {

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import { Context } from "./appcontext";
-import AddProduct from "./addproduct";
+import AddProduct from "./component/addproduct";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import Search from "./searchcomponent";
@@ -18,7 +18,6 @@ let Home = () => {
 
   let counter = useContext(Context);
 
-  
   return (
     <div className="contener">
       <div className="navber">
@@ -35,7 +34,6 @@ let Home = () => {
             <div className="nav">
               <Link to="/">Home</Link>
               <Link to="/product">Product</Link>
-              
 
               <Link to="/cart">
                 <button className="cartbutton">
@@ -55,7 +53,7 @@ let Home = () => {
           </div>
           <Link to="/">Home</Link>
           <Link to="/product">Product</Link>
-  
+
           <div className="link">
             <Link to="/cart">
               <button className="cartbutton">
@@ -80,8 +78,7 @@ let Home = () => {
       <div className="order">
         <h1 style={{ color: "orange" }}>Order Now!!</h1>
       </div>
-             <Search/>
-      
+      <Search />
 
       <div className="productcontener">
         <AddProduct />
