@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./App.css";
-import { Context } from "../appcontext";
+import { Context } from "./appcontext";
 import { Link } from "react-router";
 let Cart = () => {
   let counter = useContext(Context);

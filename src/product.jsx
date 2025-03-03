@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router";
-import AddProduct from "./component/addproduct";
+import AddProduct from "./addproduct";
 import { Context } from "./appcontext";
 
 let Product = () => {

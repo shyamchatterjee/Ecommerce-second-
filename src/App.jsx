@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./home";
 import Product from "./product";
 
-import Cart from "./component/addcart";
+import Cart from "./addcart";
 import Single from "./single";
 import Buy from "./bynow";
 import { Contextfuntion } from "./appcontext";

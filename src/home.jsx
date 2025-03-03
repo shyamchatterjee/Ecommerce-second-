@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import { Context } from "./appcontext";
-import AddProduct from "./component/addproduct";
+import AddProduct from "./addproduct";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import Search from "./searchcomponent";
