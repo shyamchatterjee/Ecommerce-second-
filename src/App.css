@@ -32,6 +32,7 @@ a {
 
 
 
+
 .nav{
   width: 100%;
   display: flex;
@@ -40,6 +41,7 @@ a {
   background-color: #FFFF;
     padding: 1rem;
 }
+
 .cart-length{
   display: flex;
 }
@@ -80,14 +82,7 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 650px) {
-  .products {
-    width: 100%;
-  }
-  .productcontener {
-    padding: 2rem;
-  }
-}
+
 #text {
   width: 600px;
   outline: none;
@@ -95,90 +90,11 @@ a {
   border: 1px solid black;
 }
 
-@media (max-width: 650px) {
-  #text {
-    margin-top: 30px;
-    width: 300px;
-    outline: none;
-    padding: 5px;
-    border: 1px solid black;
-  }
-  .link {
-    visibility: hidden;
-  }
-}
 
-@media (max-width: 650px) {
-  .cartbutton {
-    background-color: white;
-    color: red;
-    width: 100px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-  }
-  .cartimg {
-    position: absolute;
-    z-index: 1;
-  }
-  .pera {
-    position: absolute;
-    z-index: 2;
-    color: white;
-    background-color: red;
-    border-radius: 10%;
-    top: 60px;
-    margin-left: 1rem;
-  }
-  .peradis {
-    display: none;
-  }
-}
-@media (max-width: 1400px) {
-  .cartbutton {
-    background-color: white;
-    color: red;
-    width: 100px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .cartimg {
-    font-size: 20px;
-    position: absolute;
-    z-index: 1;
 
-    color: black;
-  }
-  .peracontener {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    z-index: 2;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    border-radius: 50%;
-    margin-left: 18px;
+  
 
-    box-sizing: border-box;
-  }
-  .pera {
-    color: white;
-    font-size: 8px;
-    border-radius: 10%;
-  }
-  .peradis {
-    display: none;
-  }
-}
 
 .pro {
   padding: 3px;
@@ -233,12 +149,7 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 650px) {
-  .order {
-    margin-top: 30px;
-    display: none;
-  }
-}
+
 .totalproductbutton {
   color: white;
   background-color: blue;
@@ -281,11 +192,7 @@ a {
   height: 30px;
   cursor: pointer;
 }
-@media (max-width: 650px) {
-  .pro {
-    width: 100%;
-  }
-}
+
 
 .uppersingle {
   padding: 1rem;
