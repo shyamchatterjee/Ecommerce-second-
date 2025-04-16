@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "./appcontext";
-
+import { CiShoppingCart } from "react-icons/ci";
 let Button = ({ element }) => {
   let [text, settext] = useState("Add to cart");
   let [color, setcolor] = useState("orange");
@@ -20,17 +20,24 @@ let Button = ({ element }) => {
     }, 2000);
   };
   return (
-    <button
-      style={{ backgroundColor: color }}
-      disabled={dis}
-      onClick={(e) => {
-        e.preventDefault(), counter.click(element);
-        changetext();
-      }}
-      className="added"
-    >
-      {text}
-    </button>
+    // <button
+      // style={{ backgroundColor: color }}
+      // disabled={dis}
+      // onClick={(e) => {
+        // e.preventDefault(), counter.click(element);
+        // changetext();
+      // }}
+      // className="added"
+    // >
+      // {text}
+    // </button>
+    <CiShoppingCart  style={{ color: color ,fontSize:"30px" , cursor:"pointer"}}
+    disabled={dis}
+    onClick={(e) => {
+      e.preventDefault(), counter.click(element);
+      changetext();
+    }}
+    />
   );
 };
 export default Button;

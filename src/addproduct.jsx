@@ -19,10 +19,13 @@ let AddProduct = () => {
             return (
               <Link to={"/product/" + element.id + "/" + element.category}>
                 <div className="product">
-                  <img src={element.images} height={100} width={100} alt="" />
+                  <img src={element.images} width="200px" height="200px" alt="" />
                   <h3 style={{ color: "black" }}>{element.category}</h3>
+                 
                   <p style={{ color: "black" }}>{element.title}</p>
                   <h4 style={{ color: "red" }}>{element.brand}</h4>
+                  <p>{element.reviews[0].comment}</p>
+                  <p>{ "**** "  + element.rating+  " rating"  }</p>
                   <p style={{ color: "green" }}>{"Rs. " + element.price}</p>
                   <Button element={element} />
                 </div>

@@ -2,11 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:"Poppins", sans-serif; 
 }
+
 
 body {
   width: 100%;
   height: 100vh;
+  background-color: #eaeaea;
 }
 .contener {
   height: 100vh;
@@ -18,108 +21,37 @@ body {
   align-items: center;
 }
 
-@media (max-width: 1400px) {
-  .navber {
-    height: 50px;
-    width: 100%;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: black;
-  }
-}
-@media (max-width: 1400px) {
-  .side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .buttons {
-    visibility: hidden;
-  }
-  .sideber {
-    visibility: hidden;
-  }
-}
+
+
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
+  
 }
 
-@media (max-width: 650px) {
-  .contener {
-    position: absolute;
 
-    z-index: 1;
-    display: flex;
 
-    align-items: center;
-  }
-  .side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 70px;
-  }
-
-  .navber {
-    height: 20px;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFFF;
+    padding: 1rem;
 }
-@media (max-width: 650px) {
-  /*.side {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }*/
-  .buttons {
-    visibility: visible;
-  }
+.cart-length{
+  display: flex;
 }
-@media (max-width: 650px) {
-  .sideber {
-    visibility: visible;
-    height: 80vh;
-    width: 250px;
-    background-color: white;
-    position: absolute;
-    top: 20px;
-    z-index: 2;
-    margin-right: 400px;
-    box-shadow: 5px 0 10px 5px black;
-  }
-  .nav > a {
-    color: black;
-  }
-  .nav > a:hover {
-    border-bottom: 1px solid rgba(255, 0, 0, 0.993);
-  }
-  .nav {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.hide{
+  display: none;
 }
 
 .productcontener {
-  padding: 2rem;
-  height: 100vh;
-  width: 90%;
-  /* display: flex; */
-  /* justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .products {
@@ -134,8 +66,10 @@ a {
 .product {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 5px;
   gap: 1rem;
+  background-color: #FFFF;
+  padding: 10px;
 }
 .added {
   width: 150px;
@@ -155,7 +89,7 @@ a {
   }
 }
 #text {
-  width: 300px;
+  width: 600px;
   outline: none;
   padding: 5px;
   border: 1px solid black;
@@ -248,15 +182,15 @@ a {
 
 .pro {
   padding: 3px;
-  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+    padding: 5px;
   gap: 1rem;
   background-color: white;
-  box-shadow: 5px 0 10px 5px black;
+  
 }
 .conteners {
   width: 100%;
@@ -266,7 +200,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-color: white;
+
   position: absolute;
   z-index: 1;
 }
@@ -276,14 +210,13 @@ a {
   padding: 1rem;
   width: 100%;
 
-  background-color: white;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   box-sizing: border-box;
-  box-shadow: 5px 0 10px 5px black;
 }
 
 .totaldiv {
@@ -356,4 +289,63 @@ a {
 
 .uppersingle {
   padding: 1rem;
+}
+.upper-container{
+  width: 700px;
+  height: 500px;
+  background-color: white;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mini-container{
+  padding: 1rem;
+  background-color: #FFFF;
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+ 
+ 
+}
+.shoop-now-button{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+.second-part{
+  display: flex;
+    flex-direction: column;
+  gap: 1rem;
+  
+}
+.frist-part{
+  display: flex;
+  flex-direction: column;
+    font-size: 30px;
+}
+.singlecontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.website-name-container{
+  display: flex;
+  align-items: center;
+}
+.heading-image{
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }

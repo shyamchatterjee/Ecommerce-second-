@@ -10,7 +10,7 @@ export let Contextfuntion = ({ children }) => {
   let [deta, setdeta] = useState([]);
 
   let [cart, setcart] = useState([]);
-  let [buy, setbuy] = useState([]);
+  
   
   // let api = async () => {
   // let responce = await axios.get(
@@ -24,6 +24,7 @@ export let Contextfuntion = ({ children }) => {
         "https://dummyjson.com/products"
       );
       setdeta(responce.data.products);
+      console.log(responce.data.products)
     };
     api();
   }, []);
@@ -46,23 +47,7 @@ export let Contextfuntion = ({ children }) => {
     }
   };
   
-  let buyNow = (element) => {
-    let finditem = buy.find((item) => {
-      if (item.id === element.id) {
-        return item;
-      }
-    });
-    if (finditem) {
-      let filteritem = buy.filter((item) => {
-        if (item.id !== element.id) {
-          return item;
-        }
-      });
-      setbuy([...filteritem, { ...finditem, q: finditem.q + 1 }]);
-    } else {
-      setbuy([...buy, { ...element, q: 1 }]);
-    }
-  };
+ 
   let remove = (element) => {
     let p = cart.filter((item) => {
       if (item.id !== element.id) {
@@ -79,8 +64,7 @@ export let Contextfuntion = ({ children }) => {
         deta,
         click,
         cart,
-        buyNow,
-        buy,
+        
         remove
       
       }}

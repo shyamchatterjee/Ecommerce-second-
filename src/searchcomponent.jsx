@@ -21,7 +21,7 @@ let Search = () => {
     } else {
       let filterfuntion = () => {
         let filteritem = counter.deta.filter((element) => {
-          if (element.category.includes(text)) {
+          if (element.category.toLowerCase().includes(text.toLowerCase())||element.title.toLowerCase().includes(text.toLowerCase())) {
             return element;
           }
         });
@@ -37,7 +37,7 @@ let Search = () => {
         type="text"
         name=""
         id="text"
-        placeholder="Search"
+        placeholder="Search-product"
          value={text}
          onChange={textFuntion}
       />

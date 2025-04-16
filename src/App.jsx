@@ -5,7 +5,7 @@ import Product from "./product";
 
 import Cart from "./addcart";
 import Single from "./single";
-import Buy from "./bynow";
+
 import { Contextfuntion } from "./appcontext";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:elementid/:elementname" element={<Single />} />
-          <Route path="/buy" element={<Buy />} />
+         
         </Routes>
       </Contextfuntion>
     </BrowserRouter>

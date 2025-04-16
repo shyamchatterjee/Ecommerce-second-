@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import "./App.css";
 import { Context } from "./appcontext";
 import { Link } from "react-router";
+import { CiShoppingCart } from "react-icons/ci";
+import { IoIosRemoveCircle } from "react-icons/io";
 let Cart = () => {
   let counter = useContext(Context);
   let [totals, settotal] = useState();
@@ -20,13 +22,17 @@ let Cart = () => {
     }
   };
   return (
-    <div className="uppercontener">
+    // <div className="uppercontener">
       <div className="conteners">
-        <Link to={"/"}>
-          <button style={{ backgroundColor: "black" }} className="addeds">
-            Back
-          </button>
-        </Link>
+      <div className="nav">
+      <div className="website-name-container">
+                          <img src="https://cdn-icons-png.flaticon.com/512/7835/7835563.png"  height={25} width={25} alt="" />
+                             <p style={{fontSize:"15px"}}>ShopZone</p>
+                     </div>
+           <Link to="/"><p style={{fontSize:"20px"}}>Home</p></Link>
+           <Link to="/product"><p style={{fontSize:"20px"}}>Product</p></Link>
+          
+         </div>
 
         <div className="totaldiv">
           <button
@@ -51,7 +57,7 @@ let Cart = () => {
                   <img src={element.images} height={100} width={100} alt="" />
                   <h3>{element.category}</h3>
                   <p>{element.title}</p>
-                  <p>{element.q}</p>
+                  <p>{"Qunatity: "  +  element.q}</p>
                   <p>
                     {"Rs." +
                       element.price +
@@ -62,19 +68,15 @@ let Cart = () => {
                       "Rs. " +
                       element.price * element.q}
                   </p>
-                  <button
-                    className="remove"
-                    onClick={() => counter.remove(element)}
-                  >
-                    Remove
-                  </button>
+                 
+                  <IoIosRemoveCircle   onClick={() => counter.remove(element)} style={{color:"green" ,fontSize:"22px" , cursor:"pointer"}} />
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 export default Cart;
