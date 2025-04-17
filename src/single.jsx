@@ -47,7 +47,7 @@ let Single = () => {
                 
                   <p>{ "**** "  + array?.rating+  " rating"  }</p>
             <p style={{ color: "green" }}>{"Rs. " + array?.price}</p>
-                <Button/>
+        
           </div>
         
       </div>
