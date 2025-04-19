@@ -31,7 +31,7 @@ let Home = () => {
                     </div>
                     <Link to="/product"><button className="shoop-now-button"> <FaRegWindowRestore/> Visit Store</button></Link>
                     </div>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/91siwFKSq8L.jpg" width="400px" height="400px"     alt="" />
+                    <img className="home-img" src="https://images-na.ssl-images-amazon.com/images/I/91siwFKSq8L.jpg" width="400px" height="400px"     alt="" />
                            
                   
                  </div>

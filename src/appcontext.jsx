@@ -56,7 +56,44 @@ export let Contextfuntion = ({ children }) => {
     });
     setcart(p);
   };
-
+  let plushFuntion = (element)=>{
+    let finditem = cart.find((item) => {
+      if (item.id === element.id) {
+        return item;
+      }
+    });
+    if (finditem) {
+      let filteritem = cart.filter((item) => {
+        if (item.id !== element.id) {
+          return item;
+        }
+      });
+      setcart([...filteritem, { ...finditem, q: finditem.q + 1 }]);
+    } else {
+      setcart([...cart, { ...element, q: 1 }]);
+    }
+}
+let nagitiveFuntion = (element)=>{
+  if (element.q<=0) {
+      ""
+  }else{
+  let finditem = cart.find((item) => {
+    if (item.id === element.id) {
+      return item;
+    }
+  });
+  if (finditem) {
+    let filteritem = cart.filter((item) => {
+      if (item.id !== element.id) {
+        return item;
+      }
+    });
+    setcart([...filteritem, { ...finditem, q: finditem.q -1 }]);
+  } else {
+    setcart([...cart, { ...element, q: 1 }]);
+  }
+}
+}
   return (
     <Context.Provider
       value={{
@@ -65,7 +102,9 @@ export let Contextfuntion = ({ children }) => {
         click,
         cart,
         
-        remove
+        remove,
+        plushFuntion,
+        nagitiveFuntion
       
       }}
     >

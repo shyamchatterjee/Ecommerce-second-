@@ -6,9 +6,10 @@
 }
 
 
-body {
-  width: 100%;
-  height: 100vh;
+  
+
+ body { 
+  
   background-color: #eaeaea;
 }
 .contener {
@@ -20,7 +21,6 @@ body {
   gap: 1rem;
   align-items: center;
 }
-
 
 
 
@@ -105,7 +105,8 @@ a {
   align-items: center;
     padding: 5px;
   gap: 1rem;
-  background-color: white;
+  background-color: #FFFF;
+ 
   
 }
 .conteners {
@@ -219,6 +220,7 @@ a {
  
  
 }
+
 .shoop-now-button{
     background-color: orange;
     color: white;
@@ -255,4 +257,23 @@ a {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  
+}
+.plush-button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #eaeaea;
+  color: green;
+  cursor: pointer;
+}
+.nagitive-button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #eaeaea;
+  color: green;
+  cursor: pointer;
 }

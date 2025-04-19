@@ -3,7 +3,7 @@ import "./App.css";
 import { Context } from "./appcontext";
 import { Link } from "react-router";
 import { CiShoppingCart } from "react-icons/ci";
-import { IoIosRemoveCircle } from "react-icons/io";
+import { CiCircleRemove } from "react-icons/ci";
 let Cart = () => {
   let counter = useContext(Context);
   let [totals, settotal] = useState();
@@ -11,7 +11,7 @@ let Cart = () => {
   let total = () => {
     let sum = 0;
     counter.cart.map((element) => {
-      sum = sum + element.q + element.price;
+      sum = sum + Math.floor(element.q * element.price);
     });
     settotal("   Rs. " + Math.floor(sum));
   };
@@ -21,6 +21,7 @@ let Cart = () => {
       setstyle("none");
     }
   };
+    
   return (
     // <div className="uppercontener">
       <div className="conteners">
@@ -57,7 +58,9 @@ let Cart = () => {
                   <img src={element.images} height={100} width={100} alt="" />
                   <h3>{element.category}</h3>
                   <p>{element.title}</p>
+                  <button  className="plush-button" onClick={()=> counter.plushFuntion(element)}>+</button>
                   <p>{"Qunatity: "  +  element.q}</p>
+                  <button className="nagitive-button"   onClick={()=> counter.nagitiveFuntion(element)}>-</button>
                   <p>
                     {"Rs." +
                       element.price +
@@ -66,10 +69,12 @@ let Cart = () => {
                       " = " +
                       "" +
                       "Rs. " +
-                      element.price * element.q}
+                      Math.floor(element.price * element.q)}
                   </p>
                  
-                  <IoIosRemoveCircle   onClick={() => counter.remove(element)} style={{color:"green" ,fontSize:"22px" , cursor:"pointer"}} />
+                 
+
+< CiCircleRemove  onClick={() => counter.remove(element)} style={{color:"green" ,fontSize:"22px" , cursor:"pointer"}} />
                 </div>
               );
             })}
