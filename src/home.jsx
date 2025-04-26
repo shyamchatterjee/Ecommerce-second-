@@ -26,8 +26,8 @@ let Home = () => {
                              <p style={{fontSize:"15px"}}>ShopZone</p>
                      </div>
                     <div className="frist-part">
-                    <p>Men's and Women's</p>
-                    <p>Shoe's Collection</p>
+                    <p>Shop Now</p>
+                    <p>Multi Products</p>
                     </div>
                     <Link to="/product"><button className="shoop-now-button"> <FaRegWindowRestore/> Visit Store</button></Link>
                     </div>
