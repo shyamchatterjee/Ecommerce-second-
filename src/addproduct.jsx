@@ -16,8 +16,7 @@ let AddProduct = () => {
             element.category != "furniture" &&
             element.category != "fragrances"
           ) {
-            return (
-              <Link to={"/product/" + element.id + "/" + element.category}>
+            return <>{counter.mode=="light"?<><Link to={"/product/" + element.id + "/" + element.category}>
                 <div className="product">
                   <img src={element.images} width="200px" height="200px" alt="" />
                   <h3 style={{ color: "black" }}>{element.category}</h3>
@@ -29,8 +28,23 @@ let AddProduct = () => {
                   <p style={{ color: "green" }}>{"Rs. " + element.price}</p>
                   <Button element={element} />
                 </div>
-              </Link>
-            );
+              </Link></>:<Link to={"/product/" + element.id + "/" + element.category}>
+                <div className="product" style={{backgroundColor:"#0F1A20"}}>
+                  <img src={element.images} width="200px" height="200px" alt="" />
+                  <h3 style={{ color: "white" }}>{element.category}</h3>
+                 
+                  <p style={{ color: "white" }}>{element.title}</p>
+                  <h4 style={{ color: "white" }}>{element.brand}</h4>
+                  <p  style={{ color: "white" }} >{element.reviews[0].comment}</p>
+                  <p  style={{ color: "white" }} >{ "**** "  + element.rating+  " rating"  }</p>
+                  <p style={{ color: "green" }}>{"Rs. " + element.price}</p>
+                  <Button element={element} />
+                </div>
+              </Link>} </>
+            
+                 
+              
+            
           }
         })
       )}

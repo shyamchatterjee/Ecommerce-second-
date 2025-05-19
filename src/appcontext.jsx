@@ -10,8 +10,8 @@ export let Contextfuntion = ({ children }) => {
   let [deta, setdeta] = useState([]);
 
   let [cart, setcart] = useState([]);
-  
-  
+  let [mode,setMode] = useState("light")
+  let [boolen,setBoolen] = useState(true)
   // let api = async () => {
   // let responce = await axios.get(
   // "https://dummyjson.com/products?limit=" + limit
@@ -101,11 +101,14 @@ let nagitiveFuntion = (element)=>{
         deta,
         click,
         cart,
-        
+        mode,
         remove,
         plushFuntion,
-        nagitiveFuntion
-      
+        nagitiveFuntion,
+        setcart,
+        setMode,
+        boolen,
+        setBoolen
       }}
     >
       {children}
