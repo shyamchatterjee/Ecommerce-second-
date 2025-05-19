@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
 import { Context } from "./appcontext";
- import { Data } from "./axion";
+import { Data } from "./axion";
 
 let Search = () => {
   let counter = useContext(Context);
@@ -21,7 +21,10 @@ let Search = () => {
     } else {
       let filterfuntion = () => {
         let filteritem = counter.deta.filter((element) => {
-          if (element.category.toLowerCase().includes(text.toLowerCase())||element.title.toLowerCase().includes(text.toLowerCase())) {
+          if (
+            element.category.toLowerCase().includes(text.toLowerCase()) ||
+            element.title.toLowerCase().includes(text.toLowerCase())
+          ) {
             return element;
           }
         });
@@ -38,10 +41,9 @@ let Search = () => {
         name=""
         id="text"
         placeholder="Search-product"
-         value={text}
-         onChange={textFuntion}
+        value={text}
+        onChange={textFuntion}
       />
-     
     </>
   );
 };

@@ -18,7 +18,6 @@ function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:elementid/:elementname" element={<Single />} />
-         
         </Routes>
       </Contextfuntion>
     </BrowserRouter>

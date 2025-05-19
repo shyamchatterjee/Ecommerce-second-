@@ -21,22 +21,23 @@ let Button = ({ element }) => {
   };
   return (
     // <button
-      // style={{ backgroundColor: color }}
-      // disabled={dis}
-      // onClick={(e) => {
-        // e.preventDefault(), counter.click(element);
-        // changetext();
-      // }}
-      // className="added"
+    // style={{ backgroundColor: color }}
+    // disabled={dis}
+    // onClick={(e) => {
+    // e.preventDefault(), counter.click(element);
+    // changetext();
+    // }}
+    // className="added"
     // >
-      // {text}
+    // {text}
     // </button>
-    <CiShoppingCart  style={{ color: color ,fontSize:"30px" , cursor:"pointer"}}
-    disabled={dis}
-    onClick={(e) => {
-      e.preventDefault(), counter.click(element);
-      changetext();
-    }}
+    <CiShoppingCart
+      style={{ color: color, fontSize: "30px", cursor: "pointer" }}
+      disabled={dis}
+      onClick={(e) => {
+        e.preventDefault(), counter.click(element);
+        changetext();
+      }}
     />
   );
 };

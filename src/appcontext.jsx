@@ -10,8 +10,8 @@ export let Contextfuntion = ({ children }) => {
   let [deta, setdeta] = useState([]);
 
   let [cart, setcart] = useState([]);
-  let [mode,setMode] = useState("light")
-  let [boolen,setBoolen] = useState(true)
+  let [mode, setMode] = useState("light");
+  let [boolen, setBoolen] = useState(true);
   // let api = async () => {
   // let responce = await axios.get(
   // "https://dummyjson.com/products?limit=" + limit
@@ -20,11 +20,9 @@ export let Contextfuntion = ({ children }) => {
   // };
   useEffect(() => {
     let api = async () => {
-      let responce = await axios.get(
-        "https://dummyjson.com/products"
-      );
+      let responce = await axios.get("https://dummyjson.com/products");
       setdeta(responce.data.products);
-      console.log(responce.data.products)
+      console.log(responce.data.products);
     };
     api();
   }, []);
@@ -46,8 +44,7 @@ export let Contextfuntion = ({ children }) => {
       setcart([...cart, { ...element, q: 1 }]);
     }
   };
-  
- 
+
   let remove = (element) => {
     let p = cart.filter((item) => {
       if (item.id !== element.id) {
@@ -56,7 +53,7 @@ export let Contextfuntion = ({ children }) => {
     });
     setcart(p);
   };
-  let plushFuntion = (element)=>{
+  let plushFuntion = (element) => {
     let finditem = cart.find((item) => {
       if (item.id === element.id) {
         return item;
@@ -72,28 +69,28 @@ export let Contextfuntion = ({ children }) => {
     } else {
       setcart([...cart, { ...element, q: 1 }]);
     }
-}
-let nagitiveFuntion = (element)=>{
-  if (element.q<=0) {
-      ""
-  }else{
-  let finditem = cart.find((item) => {
-    if (item.id === element.id) {
-      return item;
-    }
-  });
-  if (finditem) {
-    let filteritem = cart.filter((item) => {
-      if (item.id !== element.id) {
-        return item;
+  };
+  let nagitiveFuntion = (element) => {
+    if (element.q <= 0) {
+      ("");
+    } else {
+      let finditem = cart.find((item) => {
+        if (item.id === element.id) {
+          return item;
+        }
+      });
+      if (finditem) {
+        let filteritem = cart.filter((item) => {
+          if (item.id !== element.id) {
+            return item;
+          }
+        });
+        setcart([...filteritem, { ...finditem, q: finditem.q - 1 }]);
+      } else {
+        setcart([...cart, { ...element, q: 1 }]);
       }
-    });
-    setcart([...filteritem, { ...finditem, q: finditem.q -1 }]);
-  } else {
-    setcart([...cart, { ...element, q: 1 }]);
-  }
-}
-}
+    }
+  };
   return (
     <Context.Provider
       value={{
@@ -108,7 +105,7 @@ let nagitiveFuntion = (element)=>{
         setcart,
         setMode,
         boolen,
-        setBoolen
+        setBoolen,
       }}
     >
       {children}

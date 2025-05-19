@@ -2,14 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 
-
-  
-
- body { 
-  
+body {
   background-color: #eaeaea;
 }
 .contener {
@@ -22,38 +18,32 @@
   align-items: center;
 }
 
-
-
 a {
   color: black;
   text-decoration: none;
-  
 }
 
-
-
-
-.nav{
+.nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFFF;
-    padding: 1rem;
+  background-color: #ffff;
+  padding: 1rem;
 }
 
-.cart-length{
+.cart-length {
   display: flex;
 }
-.hide{
+.hide {
   display: none;
 }
 
 .productcontener {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .products {
@@ -70,7 +60,7 @@ a {
   flex-direction: column;
   border-radius: 5px;
   gap: 1rem;
-  background-color: #FFFF;
+  background-color: #ffff;
   padding: 10px;
 }
 .added {
@@ -82,19 +72,12 @@ a {
   cursor: pointer;
 }
 
-
 #text {
   width: 600px;
   outline: none;
   padding: 5px;
   border: 1px solid black;
 }
-
-
-
-
-  
-
 
 .pro {
   /* padding: 3px; */
@@ -103,22 +86,20 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-    padding: 5px;
+  padding: 5px;
   gap: 1rem;
-  background-color: #FFFF;
- 
-  
+  background-color: #ffff;
 }
-.pro-dark{
-   /* padding: 2px; */
+.pro-dark {
+  /* padding: 2px; */
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-    padding: 5px;
+  padding: 5px;
   gap: 1rem;
-  background-color:  #0F1A20;
+  background-color: #0f1a20;
 }
 .conteners {
   width: 100%;
@@ -138,7 +119,6 @@ a {
   padding: 1rem;
   width: 100%;
 
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +140,6 @@ a {
   border: none;
   cursor: pointer;
 }
-
 
 .totalproductbutton {
   color: white;
@@ -205,90 +184,84 @@ a {
   cursor: pointer;
 }
 
-
 .uppersingle {
   padding: 1rem;
 }
-.upper-container{
+.upper-container {
   width: 700px;
   height: 500px;
   background-color: white;
 }
-.container{
+.container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.light-container-home{
-   width: 100%;
-   height: 100vh;
+.light-container-home {
+  width: 100%;
+  height: 100vh;
 }
-.dark-container-home{
-   width: 100%;
-   height: 100vh;
-   background-color: black;
+.dark-container-home {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 }
-.mini-container{
+.mini-container {
   padding: 1rem;
-  background-color: #FFFF;
+  background-color: #ffff;
   margin-top: 50px;
   width: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
- 
- 
 }
-.light-container{
+.light-container {
   width: 100%;
   height: 100vh;
-  
 }
-.dark-container{
+.dark-container {
   width: 100%;
   height: 100vh;
   background-color: black;
 }
-.shoop-now-button{
-    background-color: orange;
-    color: white;
-    border: none;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
+.shoop-now-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
 }
-.second-part{
-  display: flex;
-    flex-direction: column;
-  gap: 1rem;
-  
-}
-.frist-part{
+.second-part {
   display: flex;
   flex-direction: column;
-    font-size: 30px;
+  gap: 1rem;
 }
-.singlecontainer{
+.frist-part {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+.singlecontainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.website-name-container{
+.website-name-container {
   display: flex;
   align-items: center;
 }
-.heading-image{
+.heading-image {
   width: 100%;
   margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  
 }
-.plush-button{
+.plush-button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -297,7 +270,7 @@ a {
   color: green;
   cursor: pointer;
 }
-.nagitive-button{
+.nagitive-button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -306,13 +279,13 @@ a {
   color: green;
   cursor: pointer;
 }
-.active{
-   border-bottom: 2px solid orange;
+.active {
+  border-bottom: 2px solid orange;
 }
-.lightmode-container{
-   width: 100%;
+.lightmode-container {
+  width: 100%;
 }
-.darkmode-container{
-   width: 100%;
-   background-color: black;
+.darkmode-container {
+  width: 100%;
+  background-color: black;
 }
